@@ -154,12 +154,6 @@ Contributions are welcome! If you have suggestions, improvements, or additional 
 
 ---
 
-## 📄 License
-
-This project is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
-
----
-
 Happy hacking! 🚀
 
 ---
