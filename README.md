@@ -87,7 +87,27 @@ This project reinforces Kubernetes skills by deploying the Widgetario app throug
 
 ---
 
+## Deployment Instructions
 
+To deploy the application:
+
+1. **Set Up Kubernetes Cluster**: Ensure your cluster is up and running.
+2. **Install Helm Charts**:
+   - Navigate to the `helm/` directory.
+   - Run `helm install widgetario .` to deploy the application using Helm.
+3. **Apply Kubernetes Manifests**:
+   - Use `kubectl apply -f [manifest-file.yaml]` to apply individual Kubernetes resource definitions.
+4. **Configure Ingress**:
+   - Set up ingress controllers as defined in `part4-ingress/`.
+   - Update DNS records or `/etc/hosts` as necessary to access the application.
+5. **Set Up CI/CD Pipeline**:
+   - Configure Jenkins using the provided `Jenkinsfile`.
+   - Ensure Jenkins has access to the Kubernetes cluster and necessary credentials.
+6. **Monitoring and Logging**:
+   - Deploy Grafana and Kibana using the configurations in the `dashboards/` directory.
+   - Access dashboards to monitor application performance and logs.
+
+---
 
 ---
 
@@ -97,7 +117,7 @@ Test your deployments using the provided test scripts.
 
 ### Run with Testkube
 
-```bash
+
 # Install Testkube
 curl -sSLf https://kubeshop.github.io/testkube/install | bash
 
