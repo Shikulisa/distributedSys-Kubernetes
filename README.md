@@ -56,3 +56,65 @@ distributedSys-Kubernetes/
 ├── sample-solutions/
 ├── tests/
 └── README.md
+
+
+## 📦 Part 1: Welcome to Widgetario
+
+Containerize and deploy the base Widgetario application to Kubernetes using **Deployments** and **Services**.
+
+---
+
+## ⚙️ Part 2: Configuration
+
+Use **ConfigMaps** and **Secrets** to manage environment-specific settings and sensitive data securely.
+
+---
+
+## 💾 Part 3: Storage
+
+Implement **PersistentVolumes (PVs)** and **PersistentVolumeClaims (PVCs)** for persistent application storage.
+
+---
+
+## 🌐 Part 4: Ingress
+
+Set up an **Ingress Controller** to:
+- Route external traffic.
+- Secure communication using **TLS** certificates.
+
+---
+
+## 🏗️ Part 5: Productionizing
+
+Make your deployment production-ready by:
+- Adding **readiness** and **liveness probes**.
+- Following **security best practices**.
+- Defining **resource limits** for containers.
+
+---
+
+## 📊 Part 6: Observability
+
+Enable monitoring and logging by:
+- Integrating **Prometheus** and **Grafana** for performance metrics.
+- Collecting logs and application metrics.
+
+---
+
+## 🔁 Part 7: CI/CD
+
+Automate your pipeline using **Jenkins**:
+- Trigger builds, tests, and deployments on each GitHub push.
+- Use a properly configured `Jenkinsfile`.
+
+---
+
+## 🧪 Testing with Testkube
+
+Ensure your services are working as expected:
+
+### Install and initialize Testkube:
+
+```bash
+curl -sSLf https://kubeshop.github.io/testkube/install | bash
+testkube init
