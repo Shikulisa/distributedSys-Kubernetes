@@ -58,63 +58,72 @@ distributedSys-Kubernetes/
 └── README.md
 
 
-## 📦 Part 1: Welcome to Widgetario
-
-Containerize and deploy the base Widgetario application to Kubernetes using **Deployments** and **Services**.
 
 ---
 
-## ⚙️ Part 2: Configuration
+## Hackathon Stages
 
-Use **ConfigMaps** and **Secrets** to manage environment-specific settings and sensitive data securely.
+### Part 1: Welcome to Widgetario
+
+- Containerize a basic application.
+- Deploy it to Kubernetes using `kubectl`.
+- Expose the app using a `Service`.
+
+### Part 2: Configuration
+
+- Manage app settings using `ConfigMaps` and `Secrets`.
+- Demonstrate separation of config and code.
+
+### Part 3: Storage
+
+- Use `PersistentVolumes` and `PersistentVolumeClaims`.
+- Attach storage to pods for stateful services.
+
+### Part 4: Ingress
+
+- Install an Ingress controller (e.g., NGINX).
+- Configure routing rules and enable TLS.
+- Route multiple apps through one external IP.
+
+### Part 5: Productionizing
+
+- Add liveness/readiness probes.
+- Set resource requests and limits.
+- Implement pod-level security.
+
+### Part 6: Observability
+
+- Use Prometheus to collect metrics.
+- Create dashboards in Grafana.
+- Aggregate and ship logs via Fluent Bit.
+
+### Part 7: CI/CD
+
+- Automate builds and deployments with Jenkins.
+- Integrate with GitHub Webhooks.
+- Trigger deployments to Kubernetes using pipelines.
 
 ---
 
-## 💾 Part 3: Storage
+## Sample Solutions
 
-Implement **PersistentVolumes (PVs)** and **PersistentVolumeClaims (PVCs)** for persistent application storage.
-
----
-
-## 🌐 Part 4: Ingress
-
-Set up an **Ingress Controller** to:
-- Route external traffic.
-- Secure communication using **TLS** certificates.
+Sample implementations for each part are found under `sample-solutions/`. Use them as reference or fallback if needed.
 
 ---
 
-## 🏗️ Part 5: Productionizing
+## Testing
 
-Make your deployment production-ready by:
-- Adding **readiness** and **liveness probes**.
-- Following **security best practices**.
-- Defining **resource limits** for containers.
+Test your deployments using the provided test scripts.
 
----
-
-## 📊 Part 6: Observability
-
-Enable monitoring and logging by:
-- Integrating **Prometheus** and **Grafana** for performance metrics.
-- Collecting logs and application metrics.
-
----
-
-## 🔁 Part 7: CI/CD
-
-Automate your pipeline using **Jenkins**:
-- Trigger builds, tests, and deployments on each GitHub push.
-- Use a properly configured `Jenkinsfile`.
-
----
-
-## 🧪 Testing with Testkube
-
-Ensure your services are working as expected:
-
-### Install and initialize Testkube:
+### Run with Testkube
 
 ```bash
+# Install Testkube
 curl -sSLf https://kubeshop.github.io/testkube/install | bash
+
+# Initialize Testkube in your cluster
 testkube init
+
+# Create and run test
+testkube create test --name widgetario-test --type postman/test --uri https://github.com/Shikulisa/distributedSys-Kubernetes/tests
+testkube run test widgetario-test
