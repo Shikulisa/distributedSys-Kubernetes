@@ -42,24 +42,6 @@ This project reinforces Kubernetes skills by deploying the Widgetario app throug
 
 ---
 
-## Project Structure
-
-```bash
-distributedSys-Kubernetes/
-├── part1-welcome/
-├── part2-configuration/
-├── part3-storage/
-├── part4-ingress/
-├── part5-productionizing/
-├── part6-observability/
-├── part7-ci-cd/
-├── sample-solutions/
-├── tests/
-└── README.md
-
-
-
----
 
 ## Hackathon Stages
 
@@ -127,3 +109,18 @@ testkube init
 # Create and run test
 testkube create test --name widgetario-test --type postman/test --uri https://github.com/Shikulisa/distributedSys-Kubernetes/tests
 testkube run test widgetario-test
+
+## Project Structure
+
+```bash
+distributedSys-Kubernetes/
+├── part1-welcome/
+├── part2-configuration/
+├── part3-storage/
+├── part4-ingress/
+├── part5-productionizing/
+├── part6-observability/
+├── part7-ci-cd/
+├── sample-solutions/
+├── tests/
+└── README.md
