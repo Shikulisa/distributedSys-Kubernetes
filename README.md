@@ -87,9 +87,7 @@ This project reinforces Kubernetes skills by deploying the Widgetario app throug
 
 ---
 
-## Sample Solutions
 
-Sample implementations for each part are found under `sample-solutions/`. Use them as reference or fallback if needed.
 
 ---
 
